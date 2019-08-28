@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: kbt-turbine
+  rabbitmq:
+    host: kbt-rabbitmq
+    port: 5672
+    username: guest
+    passwprd: guest
+server:
+  port: 13001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kbt-eureka:10001/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

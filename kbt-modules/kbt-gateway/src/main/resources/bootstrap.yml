@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: kbt-gateway
+server:
+  port: 12001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kbt-eureka:10001/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            # 熔断器超时时间，默认：1000/毫秒
+            timeoutInMilliseconds: 5000

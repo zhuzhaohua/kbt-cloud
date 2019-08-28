@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: kbt-auth
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        service-id: kbt-config
+        enabled: true
+      profile: ${spring.profiles.active}
+  rabbitmq:
+    host: kbt-rabbitmq
+    port: 5672
+    username: guest
+    passwprd: guest
+zipkin:
+  rabbitmq:
+    queue: zipkin
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kbt-eureka:10001/eureka/
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

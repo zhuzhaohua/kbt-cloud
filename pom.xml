@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.6.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.kobuta.cloud</groupId>
+    <artifactId>kbt-cloud</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>kbt-cloud</name>
+    <description>kobuta spring cloud cli</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
+
+        <starter-web.version>2.0.6.RELEASE</starter-web.version>
+        <starter-actuator.version>2.0.6.RELEASE</starter-actuator.version>
+        <starter-eureka.version>2.0.2.RELEASE</starter-eureka.version>
+        <starter-bus.version>2.0.0.RELEASE</starter-bus.version>
+        <starter-hystrix.version>2.0.2.RELEASE</starter-hystrix.version>
+        <starter-zipkin.version>2.0.2.RELEASE</starter-zipkin.version>
+        <starter-config.version>2.0.2.RELEASE</starter-config.version>
+        <starter-zuul.version>2.0.2.RELEASE</starter-zuul.version>
+        <starter-turbine.version>2.0.2.RELEASE</starter-turbine.version>
+        <starter-rabbit.version>2.0.1.RELEASE</starter-rabbit.version>
+        <starter-feign.version>2.0.2.RELEASE</starter-feign.version>
+        <starter-oauth.version>2.0.2.RELEASE</starter-oauth.version>
+        <starter-admin.version>2.0.6</starter-admin.version>
+        <starter-jpa.version>2.0.6.RELEASE</starter-jpa.version>
+
+        <redis.version>2.0.7.RELEASE</redis.version>
+        <mysql.version>8.0.13</mysql.version>
+        <druid.version>1.1.10</druid.version>
+        <zipkin.version>2.11.12</zipkin.version>
+        <lombok.version>1.16.20</lombok.version>
+
+    </properties>
+
+    <modules>
+        <module>kbt-modules</module>
+        <module>kbt-demo</module>
+    </modules>
+
+    <dependencies>
+        <!--Lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

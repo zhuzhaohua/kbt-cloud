@@ -1,0 +1,27 @@
+server:
+  port: 14001
+spring:
+  application:
+    name: kbt-zipkin
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: kbt-rabbitmq:5672
+      queue: zipkin
+      username: guest
+      passwprd: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kbt-eureka:10001/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

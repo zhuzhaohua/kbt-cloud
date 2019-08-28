@@ -1,0 +1,22 @@
+server:
+  port: 15001
+spring:
+  application:
+    name: kbt-admin
+  boot:
+    admin:
+      monitor:
+        #监控超时时间
+        connect-timeout: 30000
+        default-retries: 2
+eureka:
+  client:
+    service-url:
+      defaultZone: http://kbt-eureka:10001/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
